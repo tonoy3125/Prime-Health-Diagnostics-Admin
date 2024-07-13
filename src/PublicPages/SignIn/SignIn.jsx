@@ -30,12 +30,32 @@ const SignIn = () => {
         <form>
           <div>
             <h3
-              className="text-[#333] text-[15px] font-outfit"
+              className="text-[#333] text-[15px] font-outfit mb-[2px] mt-7"
               style={{ lineHeight: "1.5", letterSpacing: ".4px" }}
             >
               Email Address
             </h3>
-            <input className="border " type="email" name="email" placeholder="" />
+            <input
+              className="border-[#6a71854d] w-full py-3 pl-6 bg-[#f4f5f8] rounded-[5px] font-outfit text-sm text-[#898989] focus:outline-none"
+              type="email"
+              name="email"
+              placeholder="test123@gmail.com"
+            />
+          </div>
+
+          <div>
+            <h3
+              className="text-[#333] text-[15px] font-outfit mb-[2px] mt-[18px]"
+              style={{ lineHeight: "1.5", letterSpacing: ".4px" }}
+            >
+              Password
+            </h3>
+            <input
+              className="border-[#6a71854d] w-full py-3 pl-6 bg-[#f4f5f8] rounded-[5px] font-outfit text-sm text-[#898989] focus:outline-none"
+              type="password"
+              name="email"
+              placeholder=""
+            />
           </div>
         </form>
       </div>
