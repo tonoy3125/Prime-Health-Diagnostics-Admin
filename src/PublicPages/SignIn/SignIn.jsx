@@ -13,7 +13,7 @@ const SignIn = () => {
           Prime Health Diagnostics
         </h1>
       </div>
-      <div className="w-[450px] h-96 mx-auto border p-10 rounded-[10px] border-[#0815420d] bg-[#fff]">
+      <div className="w-[450px]  mx-auto border p-10 rounded-[10px] border-[#0815420d] bg-[#fff]">
         <h3
           className="text-center font-outfit text-[26px] font-medium  text-[#3d3d47]"
           style={{ lineHeight: "1.2", letterSpacing: ".6px" }}
@@ -56,6 +56,18 @@ const SignIn = () => {
               name="email"
               placeholder=""
             />
+          </div>
+          <div className="flex items-center justify-between">
+            <div className="checkbox-container">
+              <input type="checkbox" id="rememberMe" />
+              <label className="custom-checkbox" htmlFor="rememberMe"></label>
+              <label className="checkbox-label" htmlFor="rememberMe">
+                Remember password
+              </label>
+            </div>
+            <p className="text-[#43b9b2] text-center font-outfit text-sm mt-3">
+              Forgot password?
+            </p>
           </div>
         </form>
       </div>
