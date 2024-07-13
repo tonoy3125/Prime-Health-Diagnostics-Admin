@@ -3,6 +3,7 @@ import "./signIn.css";
 import { CiTwitter } from "react-icons/ci";
 import { FaFacebookF, FaGoogle } from "react-icons/fa";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 
 const SignIn = () => {
@@ -142,7 +143,7 @@ const SignIn = () => {
             style={{ letterSpacing: ".4px" }}
           >
             <span className="text-[#898989]">Don't have account? </span>
-            <span className="text-[#43b9b2]"> Create Account</span>
+            <Link to='/admin/signup'><span className="text-[#43b9b2] cursor-pointer"> Create Account</span></Link>
           </p>
         </form>
       </div>
