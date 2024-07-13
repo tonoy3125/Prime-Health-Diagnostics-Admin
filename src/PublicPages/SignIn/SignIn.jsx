@@ -1,11 +1,11 @@
+import './signIn.css'
 
-
-const SignUp = () => {
-    return (
-        <div>
-            <h1>Sign Up</h1>
-        </div>
-    );
+const SignIn = () => {
+  return (
+    <div className="background-container">
+      <h1>Sign In</h1>
+    </div>
+  );
 };
 
-export default SignUp;
+export default SignIn;

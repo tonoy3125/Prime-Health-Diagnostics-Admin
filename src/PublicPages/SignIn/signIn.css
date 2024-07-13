@@ -1,0 +1,11 @@
+.background-container {
+  background-image: url("../../assets/login.jpg");
+  /* height: 100%; */
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  margin: 0, auto;
+  display: flex;
+  justify-content: center;
+}
