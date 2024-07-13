@@ -50,3 +50,10 @@
   font-size: 14px;
   color: #898989;
 }
+
+@media (max-width: 768px) {
+  .background-container {
+    background-image: none;
+    background-color: #43b9b20d;
+  }
+}

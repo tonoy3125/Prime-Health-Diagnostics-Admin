@@ -3,14 +3,14 @@ import "./signIn.css";
 import { CiTwitter } from "react-icons/ci";
 import { FaFacebookF, FaGoogle } from "react-icons/fa";
 import { useState } from "react";
-import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
+
 
 const SignIn = () => {
   const [showPassword, setShowPassword] = useState(false);
 
   return (
     <div className="background-container pt-[148px]">
-      <div className="flex items-center gap-5 md:gap-3 lg:gap-0 justify-center mb-8">
+      <div className="flex items-center gap-3 md:gap-3 lg:gap-2 justify-center mb-8 ml-6">
         <img
           className="w-8"
           src="https://i.postimg.cc/XqYK1cFJ/fevicon2.png"
@@ -20,7 +20,7 @@ const SignIn = () => {
           Prime Health Diagnostics
         </h1>
       </div>
-      <div className="w-[450px]  mx-auto border p-10 rounded-[10px] border-[#0815420d] bg-[#fff] shadow-2xl shadow-[#0815420d]">
+      <div className="xs:w-[300px] sm:w-[340px] semi-sm:w-[380px] md:w-[450px]  mx-auto border xs:p-4 semi-sm:p-5 md:p-10 rounded-[10px] border-[#0815420d] bg-[#fff] shadow-2xl shadow-[#0815420d]">
         <h3
           className="text-center font-outfit text-[26px] font-medium  text-[#3d3d47]"
           style={{ lineHeight: "1.2", letterSpacing: ".6px" }}
@@ -43,7 +43,7 @@ const SignIn = () => {
               Email Address
             </h3>
             <input
-              className="border-[#6a71854d] w-full py-3 pl-6 bg-[#f4f5f8] rounded-[5px] font-outfit text-sm text-[#898989] focus:outline-none"
+              className="border-[#6a71854d] w-full py-3 pl-3 md:pl-6 bg-[#f4f5f8] rounded-[5px] font-outfit text-sm text-[#898989] focus:outline-none"
               type="email"
               name="email"
               placeholder="test123@gmail.com"
@@ -59,7 +59,7 @@ const SignIn = () => {
             </h3>
             <div className="relative">
               <input
-                className="border-[#6a71854d] w-full py-3 pl-6 bg-[#f4f5f8] rounded-[5px] font-outfit text-sm text-[#898989] focus:outline-none"
+                className="border-[#6a71854d] w-full py-3 pl-3 md:pl-6 bg-[#f4f5f8] rounded-[5px] font-outfit text-sm text-[#898989] focus:outline-none"
                 type={showPassword ? "text" : "password"}
                 name="password"
                 id=""
@@ -73,7 +73,7 @@ const SignIn = () => {
               >
                 {showPassword ? (
                   <p className="text-sm font-outfit text-[#43b9b2] cursor-pointer">
-                    show
+                    hide
                   </p>
                 ) : (
                   <p className="text-sm font-outfit text-[#43b9b2] cursor-pointer">
@@ -83,7 +83,7 @@ const SignIn = () => {
               </span>
             </div>
           </div>
-          <div className="flex items-center justify-between">
+          <div className="flex xs:flex-col sm:flex-row sm:items-center justify-between">
             <div className="checkbox-container">
               <input type="checkbox" id="rememberMe" />
               <label className="custom-checkbox" htmlFor="rememberMe"></label>
@@ -96,7 +96,7 @@ const SignIn = () => {
               </label>
             </div>
             <p
-              className="text-[#43b9b2] text-center font-outfit text-sm mt-3"
+              className="text-[#43b9b2] text-end sm:text-center font-outfit text-sm mt-3"
               style={{ letterSpacing: ".4px" }}
             >
               Forgot password?
