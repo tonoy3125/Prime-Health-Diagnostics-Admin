@@ -2,11 +2,11 @@ import { FaLinkedinIn } from "react-icons/fa6";
 import "./signIn.css";
 import { CiTwitter } from "react-icons/ci";
 import { FaFacebookF, FaGoogle } from "react-icons/fa";
+import { useState } from "react";
+import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 
 const SignIn = () => {
-
-  
-
+  const [showPassword, setShowPassword] = useState(false);
 
   return (
     <div className="background-container pt-[148px]">
@@ -57,12 +57,31 @@ const SignIn = () => {
             >
               Password
             </h3>
-            <input
-              className="border-[#6a71854d] w-full py-3 pl-6 bg-[#f4f5f8] rounded-[5px] font-outfit text-sm text-[#898989] focus:outline-none"
-              type="password"
-              name="email"
-              placeholder=""
-            />
+            <div className="relative">
+              <input
+                className="border-[#6a71854d] w-full py-3 pl-6 bg-[#f4f5f8] rounded-[5px] font-outfit text-sm text-[#898989] focus:outline-none"
+                type={showPassword ? "text" : "password"}
+                name="password"
+                id=""
+                placeholder="Enter your password"
+              />
+              <span
+                className="absolute right-4 md:right-4 top-3 rtl:left-0 rtl:right-auto "
+                onClick={() => {
+                  setShowPassword(!showPassword);
+                }}
+              >
+                {showPassword ? (
+                  <p className="text-sm font-outfit text-[#43b9b2] cursor-pointer">
+                    show
+                  </p>
+                ) : (
+                  <p className="text-sm font-outfit text-[#43b9b2] cursor-pointer">
+                    show
+                  </p>
+                )}
+              </span>
+            </div>
           </div>
           <div className="flex items-center justify-between">
             <div className="checkbox-container">
@@ -122,7 +141,7 @@ const SignIn = () => {
             className=" text-center font-outfit text-sm mt-5"
             style={{ letterSpacing: ".4px" }}
           >
-            <span className="text-[#898989]">Don't have account?  </span>
+            <span className="text-[#898989]">Don't have account? </span>
             <span className="text-[#43b9b2]"> Create Account</span>
           </p>
         </form>
