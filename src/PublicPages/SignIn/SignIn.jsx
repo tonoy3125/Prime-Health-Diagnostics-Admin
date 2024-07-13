@@ -4,9 +4,13 @@ import { CiTwitter } from "react-icons/ci";
 import { FaFacebookF, FaGoogle } from "react-icons/fa";
 
 const SignIn = () => {
+
+  
+
+
   return (
-    <div className="background-container pt-40">
-      <div className="flex items-center gap-5 md:gap-3 lg:gap-0 justify-center mb-10">
+    <div className="background-container pt-[148px]">
+      <div className="flex items-center gap-5 md:gap-3 lg:gap-0 justify-center mb-8">
         <img
           className="w-8"
           src="https://i.postimg.cc/XqYK1cFJ/fevicon2.png"
@@ -16,7 +20,7 @@ const SignIn = () => {
           Prime Health Diagnostics
         </h1>
       </div>
-      <div className="w-[450px]  mx-auto border p-10 rounded-[10px] border-[#0815420d] bg-[#fff]">
+      <div className="w-[450px]  mx-auto border p-10 rounded-[10px] border-[#0815420d] bg-[#fff] shadow-2xl shadow-[#0815420d]">
         <h3
           className="text-center font-outfit text-[26px] font-medium  text-[#3d3d47]"
           style={{ lineHeight: "1.2", letterSpacing: ".6px" }}
@@ -114,6 +118,13 @@ const SignIn = () => {
               </button>
             </div>
           </div>
+          <p
+            className=" text-center font-outfit text-sm mt-5"
+            style={{ letterSpacing: ".4px" }}
+          >
+            <span className="text-[#898989]">Don't have account?  </span>
+            <span className="text-[#43b9b2]"> Create Account</span>
+          </p>
         </form>
       </div>
     </div>
