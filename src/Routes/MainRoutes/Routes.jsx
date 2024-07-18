@@ -1,17 +1,29 @@
 import { createBrowserRouter, Navigate } from "react-router-dom";
-import Root from "../../Layout/Root/Root";
 import PublicRoutes from "../PublicRoutes/PublicRoutes";
+import DashBoardLayout from "../../Layout/DashBoardLayout/DashBoardLayout";
+import Home from "../../DashBoardPages/DashBoardHome/Home";
+import MainLayout from "../../Layout/MainLayout/MainLayout";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Root />,
+    element: <MainLayout />,
     children: [
       {
         path: "/",
         element: <Navigate to="/admin/signin" replace />,
       },
       ...PublicRoutes,
+    ],
+  },
+  {
+    path: "/dashboard",
+    element: <DashBoardLayout />,
+    children: [
+      {
+        path: "/dashboard/home",
+        element: <Home />,
+      },
     ],
   },
 ]);
