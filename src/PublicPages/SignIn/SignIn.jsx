@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import { FaLinkedinIn } from "react-icons/fa6";
 import "./signIn.css";
 import { CiTwitter } from "react-icons/ci";

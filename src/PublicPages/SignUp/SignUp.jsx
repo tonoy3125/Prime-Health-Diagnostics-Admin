@@ -8,6 +8,18 @@ import { IoCloudUploadOutline } from "react-icons/io5";
 
 const SignUp = () => {
   const [showPassword, setShowPassword] = useState(false);
+  const [uploadedImage, setUploadedImage] = useState(null);
+
+  const handleImageUpload = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setUploadedImage(reader.result);
+      };
+      reader.readAsDataURL(file);
+    }
+  };
 
   return (
     <div className="background-container pt-[40px]">
@@ -114,22 +126,35 @@ const SignUp = () => {
               Upload Picture
             </h3>
             <div className="flex items-center justify-center w-full">
-              <label
-                htmlFor="dropzone-file"
-                className="flex flex-col items-center justify-center w-full h-24 border border-[#6a71854d] border-dashed rounded-[5px] cursor-pointer bg-[#f4f5f8] dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600"
-              >
-                <div className="flex flex-col items-center justify-center pt-5 pb-6 font-outfit">
-                  <IoCloudUploadOutline className="text-4xl"></IoCloudUploadOutline>
-                  <p className="mb-2 text-sm text-[#898989] dark:text-gray-400">
-                    <span className="font-semibold">Click to upload</span> or
-                    drag and drop
-                  </p>
-                  <p className="text-xs text-[#898989] dark:text-gray-400">
-                    SVG, PNG, JPG or GIF (MAX. 800x400px)
-                  </p>
-                </div>
-                <input id="dropzone-file" type="file" className="hidden" />
-              </label>
+              {uploadedImage ? (
+                <img
+                  src={uploadedImage}
+                  alt="Uploaded"
+                  className="w-full h-24 object-cover rounded-[5px]"
+                />
+              ) : (
+                <label
+                  htmlFor="dropzone-file"
+                  className="flex flex-col items-center justify-center w-full h-24 border border-[#6a71854d] border-dashed rounded-[5px] cursor-pointer bg-[#f4f5f8] dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600"
+                >
+                  <div className="flex flex-col items-center justify-center pt-5 pb-6 font-outfit">
+                    <IoCloudUploadOutline className="text-4xl"></IoCloudUploadOutline>
+                    <p className="mb-2 text-sm text-[#898989] dark:text-gray-400">
+                      <span className="font-semibold">Click to upload</span> or
+                      drag and drop
+                    </p>
+                    <p className="text-xs text-[#898989] dark:text-gray-400">
+                      SVG, PNG, JPG or GIF (MAX. 800x400px)
+                    </p>
+                  </div>
+                  <input
+                    id="dropzone-file"
+                    type="file"
+                    className="hidden"
+                    onChange={handleImageUpload}
+                  />
+                </label>
+              )}
             </div>
           </div>
           <div className="checkbox-container">
