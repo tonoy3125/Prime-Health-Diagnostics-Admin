@@ -24,20 +24,24 @@ const DashBoardSidebar = ({ isSidebarOpen }) => {
               }`
             }
           >
-            <div className="flex items-center gap-4">
-              <span>
-                <GoHome className="text-2xl" />
-              </span>
-              <span className="mr-5 w-[90px]">Dashboard</span>
-              <span>
-                <MdKeyboardArrowRight className="text-2xl" />
-              </span>
-            </div>
-            <span
-              className={`absolute right-[2px] text-[#767676] transition-opacity opacity-0 group-hover:opacity-100`}
-            >
-              <TbPinned />
-            </span>
+            {({ isActive }) => (
+              <div className="flex items-center gap-4 w-full">
+                <span>
+                  <GoHome className="text-2xl" />
+                </span>
+                <span className="mr-5 w-[90px] font-outfit">Dashboard</span>
+                <span className="relative ml-auto">
+                  <MdKeyboardArrowRight
+                    className={`text-2xl transition-transform duration-300 ${
+                      isActive ? "rotate-90" : ""
+                    }`}
+                  />
+                  <TbPinned
+                    className={`absolute top-1 right-[-19px] text-[#767676] text-lg transition-opacity duration-300 opacity-0 group-hover:opacity-100`}
+                  />
+                </span>
+              </div>
+            )}
           </NavLink>
         </li>
         <li className="relative text-lg font-medium text-[#767676] font-outfit  group hover:text-[#43b9b2]">
@@ -49,20 +53,24 @@ const DashBoardSidebar = ({ isSidebarOpen }) => {
               }`
             }
           >
-            <div className="flex items-center gap-4">
-              <span>
-                <IoChatbubbleEllipsesOutline className="text-2xl" />
-              </span>
-              <span className="mr-5 w-[90px]">Chat</span>
-              <span>
-                <MdKeyboardArrowRight className="text-2xl" />
-              </span>
-            </div>
-            <span
-              className={`absolute right-[2px] text-[#767676] transition-opacity opacity-0 group-hover:opacity-100`}
-            >
-              <TbPinned />
-            </span>
+            {({ isActive }) => (
+              <div className="flex items-center gap-4 w-full">
+                <span>
+                  <IoChatbubbleEllipsesOutline className="text-2xl" />
+                </span>
+                <span className="mr-5 w-[90px] font-outfit">Chat</span>
+                <span className="relative ml-auto">
+                  <MdKeyboardArrowRight
+                    className={`text-2xl transition-transform duration-300 ${
+                      isActive ? "rotate-90" : ""
+                    }`}
+                  />
+                  <TbPinned
+                    className={`absolute top-1 right-[-19px] text-[#767676] text-lg transition-opacity duration-300 opacity-0 group-hover:opacity-100`}
+                  />
+                </span>
+              </div>
+            )}
           </NavLink>
         </li>
       </ul>
