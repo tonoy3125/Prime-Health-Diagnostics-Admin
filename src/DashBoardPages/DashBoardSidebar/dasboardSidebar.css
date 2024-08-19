@@ -1,0 +1,10 @@
+/* If using regular CSS */
+.arrow-rotate {
+  transform: rotate(90deg);
+  transition: transform 0.3s ease;
+}
+
+/* Alternatively, you can use Tailwind CSS's utility classes */
+.arrow-transition {
+  transition: transform 0.3s ease;
+}

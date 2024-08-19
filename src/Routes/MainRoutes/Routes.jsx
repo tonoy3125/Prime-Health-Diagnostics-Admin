@@ -3,6 +3,7 @@ import PublicRoutes from "../PublicRoutes/PublicRoutes";
 import DashBoardLayout from "../../Layout/DashBoardLayout/DashBoardLayout";
 import Home from "../../DashBoardPages/DashBoardHome/Home";
 import MainLayout from "../../Layout/MainLayout/MainLayout";
+import AdminChat from "../../DashBoardPages/DashboardAdminChat/AdminChat";
 
 const router = createBrowserRouter([
   {
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
       {
         path: "/dashboard/home",
         element: <Home />,
+      },
+      {
+        path: "/dashboard/chat",
+        element: <AdminChat />,
       },
     ],
   },

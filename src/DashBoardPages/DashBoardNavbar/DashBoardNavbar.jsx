@@ -3,11 +3,11 @@ import { IoMdMenu } from "react-icons/io";
 import { RiSearch2Line } from "react-icons/ri";
 import "./DashBoardNavbar.css";
 
-const DashBoardNavbar = () => {
+const DashBoardNavbar = ({ toggleSidebar }) => {
   return (
     <div className="flex items-center justify-between">
       <div className="flex items-center gap-10">
-        <div className="flex items-center gap-12">
+        <div className="flex items-center gap-9">
           <div className="flex items-center gap-3 md:gap-3 lg:gap-2">
             <img
               className="w-8"
@@ -16,7 +16,10 @@ const DashBoardNavbar = () => {
             />
             <h1 className="text-xl text-[#3d3d47] font-outfit">Prime Admin</h1>
           </div>
-          <div className="border border-[#F4F5F8] p-2 bg-[#F4F5F8]">
+          <div
+            className="border border-[#F4F5F8] p-2 bg-[#F4F5F8]"
+            onClick={toggleSidebar}
+          >
             <IoMdMenu className="text-3xl" />
           </div>
         </div>
