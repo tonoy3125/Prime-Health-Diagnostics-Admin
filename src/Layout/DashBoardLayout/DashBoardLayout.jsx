@@ -2,7 +2,7 @@ import DashBoardNavbar from "../../DashBoardPages/DashBoardNavbar/DashBoardNavba
 
 const DashBoardLayout = () => {
   return (
-    <div className="ml-4 mr-4 mt-3 bg-[#fff]">
+    <div className="ml-4 mr-4 mt-4 bg-[#fff]">
       <DashBoardNavbar />
     </div>
   );
