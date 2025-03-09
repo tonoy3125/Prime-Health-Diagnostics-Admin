@@ -1,26 +1,20 @@
 /* eslint-disable react/no-unescaped-entities */
-import { FaLinkedinIn } from "react-icons/fa6";
 import "./signIn.css";
-import { CiTwitter } from "react-icons/ci";
-import { FaFacebookF, FaGoogle } from "react-icons/fa";
 import { useState } from "react";
-import { Link } from "react-router-dom";
 
 const SignIn = () => {
   const [showPassword, setShowPassword] = useState(false);
 
   return (
-    <div className="background-container pt-[148px]">
+    <div className="background-container pt-[221px]">
       {/* Logo */}
-      <div className="flex items-center gap-3 md:gap-3 lg:gap-2 justify-center mb-8 ml-6">
+      <div className="flex items-center gap-3 md:gap-3 lg:gap-2 justify-center mb-8 ">
         <img
-          className="w-8"
-          src="https://i.postimg.cc/XqYK1cFJ/fevicon2.png"
+          className="w-[105px]"
+          src="https://i.ibb.co.com/1fgpqdPj/logo-1.png"
           alt=""
         />
-        <h1 className=" w-64 text-xl text-[#3d3d47] font-outfit">
-          Prime Health Diagnostics
-        </h1>
+        {/* <h1 className=" w-64 text-xl text-[#3d3d47] font-outfit">Edmin</h1> */}
       </div>
       {/* Sign in Border Container */}
       <div className="xs:w-[300px] sm:w-[340px] semi-sm:w-[380px] md:w-[450px]  mx-auto border xs:p-4 semi-sm:p-5 md:p-10 rounded-[10px] border-[#0815420d] bg-[#fff] shadow-2xl shadow-[#0815420d]">
@@ -116,48 +110,6 @@ const SignIn = () => {
             type="button"
             value="Sign In"
           />
-          {/* Sign In with social site button */}
-          <div
-            className="divider text-[#898989] font-outfit text-sm font-normal"
-            style={{ lineHeight: "1", letterSpacing: ".6px" }}
-          >
-            Or Sign In With
-          </div>
-
-          <div className="flex items-center gap-4 justify-center mt-5">
-            <div>
-              <button className="border border-[#6a71854d] rounded-full px-3 py-3 bg-[#43b9b20d] hover:bg-[#43b9b2] text-[#43b9b2] hover:text-[#fff]">
-                <FaGoogle className="text-lg" />
-              </button>
-            </div>
-            <div>
-              <button className="border border-[#6a71854d] rounded-full px-3 py-3 bg-[#43b9b20d] hover:bg-[#43b9b2] text-[#43b9b2] hover:text-[#fff]">
-                <FaLinkedinIn className="text-lg" />
-              </button>
-            </div>
-            <div>
-              <button className="border border-[#6a71854d] rounded-full px-3 py-3 bg-[#43b9b20d] hover:bg-[#43b9b2] text-[#43b9b2] hover:text-[#fff]">
-                <CiTwitter className="text-lg" />
-              </button>
-            </div>
-            <div>
-              <button className="border border-[#6a71854d] rounded-full px-3 py-3 bg-[#43b9b20d] hover:bg-[#43b9b2] text-[#43b9b2] hover:text-[#fff]">
-                <FaFacebookF className="text-lg" />
-              </button>
-            </div>
-          </div>
-          <p
-            className=" text-center font-outfit text-sm mt-5"
-            style={{ letterSpacing: ".4px" }}
-          >
-            <span className="text-[#898989]">Don't have account? </span>
-            <Link to="/admin/signup">
-              <span className="text-[#43b9b2] cursor-pointer">
-                {" "}
-                Create Account
-              </span>
-            </Link>
-          </p>
         </form>
       </div>
     </div>

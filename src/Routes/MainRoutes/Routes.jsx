@@ -4,6 +4,9 @@ import DashBoardLayout from "../../Layout/DashBoardLayout/DashBoardLayout";
 import Home from "../../DashBoardPages/DashBoardHome/Home";
 import MainLayout from "../../Layout/MainLayout/MainLayout";
 import AdminChat from "../../DashBoardPages/DashboardAdminChat/AdminChat";
+import Users from "../../DashBoardPages/DashboardUsers/Users";
+import DashboardBookmark from "../../DashBoardPages/DashboardBookMark/DashboardBookmark";
+import DashboardContact from "../../DashBoardPages/DashboardContact/DashboardContact";
 
 const router = createBrowserRouter([
   {
@@ -28,6 +31,18 @@ const router = createBrowserRouter([
       {
         path: "/dashboard/chat",
         element: <AdminChat />,
+      },
+      {
+        path: "/dashboard/users",
+        element: <Users />,
+      },
+      {
+        path: "/dashboard/bookmark",
+        element: <DashboardBookmark />,
+      },
+      {
+        path: "/dashboard/contact",
+        element: <DashboardContact />,
       },
     ],
   },

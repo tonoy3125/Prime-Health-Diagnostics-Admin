@@ -154,7 +154,11 @@ const DashBoardNavbar = ({ toggleSidebar }) => {
             />
           </svg>
         </div>
-        <div className="flex items-center gap-3">
+        <div
+          id="dropdownDefaultButton"
+          data-dropdown-toggle="dropdown"
+          className="flex items-center gap-3"
+        >
           <img src="https://i.ibb.co/SnFnBjD/download-1.png" alt="" />
           <div>
             <h3
